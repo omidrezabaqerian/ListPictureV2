@@ -16,7 +16,7 @@ class HomeViewModel : ViewModel() {
     private val _homeResponse = MutableLiveData<List<Photo>>()
     val homeResponse: LiveData<List<Photo>> = _homeResponse
 
-    fun showInfo() {
+    fun showInfo(pageNumber: Int) {
         NetworkManager.service.showImage(
             "1c04e05bce6e626247758d120b372a73",
             "flickr.photos.getPopular",
@@ -25,7 +25,7 @@ class HomeViewModel : ViewModel() {
             "json",
             1,
             30,
-            1
+            pageNumber
         ).enqueue(
             object : Callback<ImageHome> {
                 override fun onResponse(call: Call<ImageHome>, response: Response<ImageHome>) {
@@ -39,6 +39,7 @@ class HomeViewModel : ViewModel() {
 
             }
         )
+
     }
 
 }

@@ -13,7 +13,11 @@ class ImageAdapter(private val context: Context) : RecyclerView.Adapter<ImageAda
     private var dataList = mutableListOf<Photo>()
 
     fun setDataList(dataList: List<Photo>) {
-        this.dataList.clear()
+        this.dataList.addAll(dataList)
+        notifyDataSetChanged()
+    }
+
+    fun addDataList(dataList: List<Photo>) {
         this.dataList.addAll(dataList)
         notifyDataSetChanged()
     }

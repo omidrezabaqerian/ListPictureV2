@@ -1,6 +1,5 @@
 package ir.omidrezabagherian.testapplicationfive.Data
 
-import android.text.Editable
 import ir.omidrezabagherian.testapplicationfive.ModelHome.ImageHome
 import retrofit2.Call
 import retrofit2.http.GET
