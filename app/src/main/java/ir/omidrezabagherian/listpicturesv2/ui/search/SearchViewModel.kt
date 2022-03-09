@@ -25,7 +25,8 @@ class SearchViewModel : ViewModel() {
             "url_s",
             "json",
             1,
-            30
+            30,
+            1
         ).enqueue(object : Callback<ImageHome> {
             override fun onResponse(call: Call<ImageHome>, response: Response<ImageHome>) {
                 Log.i("Response", response.body()!!.photos.photo.toString())

@@ -16,7 +16,8 @@ interface ImageService {
         @Query("extras") extras: String,
         @Query("format") format: String,
         @Query("nojsoncallback") noJsonCallBack: Int,
-        @Query("per_page") per_page: Int
+        @Query("per_page") per_page: Int,
+        @Query("page") page: Int
     ): Call<ImageHome>
 
     @GET("/services/rest/?")
@@ -28,7 +29,8 @@ interface ImageService {
         @Query("extras") extras: String,
         @Query("format") format: String,
         @Query("nojsoncallback") noJsonCallBack: Int,
-        @Query("per_page") per_page: Int
+        @Query("per_page") per_page: Int,
+        @Query("page") page: Int
     ): Call<ImageHome>
 
 }
